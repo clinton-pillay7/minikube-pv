@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apache-config
+data:
+  httpd.conf: |
+    ServerAdmin webmaster@localhost
+    DocumentRoot /usr/local/apache2/htdocs/
+    DirectoryIndex index.html
+    ErrorLog /usr/local/apache2/logs/error_log
+    CustomLog /usr/local/apache2/logs/access_log combined
